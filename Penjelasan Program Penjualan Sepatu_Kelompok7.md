@@ -26,7 +26,7 @@
  </br> 2. Menampilkan menu </br>
  </br> 3. Memasukan tampilan menu  </br>
  </br> 4. Memilih menu 1 untuk menambahkan Sepatu  </br>
-          - </p> Masukkan merek Sepatu  </p>
+          - Masukkan merek Sepatu </br>
           - Masukkan ukuran Sepatu  </br>
           - Masukkan warna Sepatu  </br>
           - Berhasil ditambahkan  </br>
@@ -37,20 +37,20 @@
           - Masukkan warna Sepatu  
           - Berhasil disisipkan  </br>
 </br> 6. Memilih menu 3 yaitu hapus Sepatu  </br>
-         </br> - Masukkan indeks untuk dihapus (dimulai dari 1)  </br>
-         </br> - Berhasil dihapus  </br>
+          - Masukkan indeks untuk dihapus (dimulai dari 1)  </br>
+          - Berhasil dihapus  </br>
  </br> 7. Memilih menu 4 yaitu tampilkan Sepatu  </br>
-         </br> - Berhasil ditampilkan  </br>
+          - Berhasil ditampilkan  </br>
  </br> 8. Memilih menu 5 yaitu edit Sepatu  </br>
-         </br> - Masukkan indeks untuk diedit (dimulai dari 1)  </br>
-         </br> - Masukkan merek Sepatu baru  </br>
-         </br> - Masukkan ukuran sepatu baru  </br>
-         </br> - Masukkan warna Sepatu baru </br> 
-         </br> - Berhasil diedit </br>
+          - Masukkan indeks untuk diedit (dimulai dari 1)  </br>
+          - Masukkan merek Sepatu baru  </br>
+          - Masukkan ukuran sepatu baru  </br>
+          - Masukkan warna Sepatu baru </br> 
+          - Berhasil diedit </br>
 </br> 9. Memilih menu 6 yaitu mencari sepatu </br>
-         </br> - Masukkan tipe pencarian (merek/ukuran/warna) </br>
-         </br> - Masukkan kata kunci pencarian </br>
-         </br> - Berhasil dicari </br>
+          - Masukkan tipe pencarian (merek/ukuran/warna) </br>
+          - Masukkan kata kunci pencarian </br>
+          - Berhasil dicari </br>
 </br> 10. Memilih menu 0 yaitu berhasil keluar </br>
 </br> 11.  Selesai </br>
 
