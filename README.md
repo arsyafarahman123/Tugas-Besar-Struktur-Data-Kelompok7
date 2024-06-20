@@ -10,5 +10,5 @@ Repository Tugas Besar Mata Kuliah Struktur Data dan Algoritma
 Kelas : IF-11-D
 Dosen : Muhammad Afrizal Amrustian, S. Kom., M. Kom.
 Mata Kuliah : Struktur Data dan Algoritma 
-
+Semester : 2
 
