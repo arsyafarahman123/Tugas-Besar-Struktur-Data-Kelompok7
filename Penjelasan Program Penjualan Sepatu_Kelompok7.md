@@ -63,16 +63,20 @@
 ```struct Sepatu { string merek; string ukuran; string warna; };``` </br>
 Struktur Sepatu digunakan untuk menyimpan data sepatu yang terdiri dari atribut merek, ukuran, dan warna dengan tipe data string. </br>
 
+
 2. Kelas TumpukanSepatu </br>
-Kelas TumpukanSepatu berfungsi untuk mengelola operasi yang dapat dilakukan pada tumpukan sepatu. Kelas ini menggunakan vektor <sepatu> untuk menyimpan data sepatu. </br>
+Kelas TumpukanSepatu berfungsi untuk mengelola operasi yang dapat dilakukan pada tumpukan sepatu. Kelas ini menggunakan array statis dari struct Sepatu untuk menyimpan data sepatu. </br>
 
-3. tumpukan: Vector dari struct sepatu yang berfungsi sebagai tumpukan untuk menyimpan data sepatu.</br>
-Metode:</br>
-4. Fungsi array sebagai Konstanta untuk ukuran array sebagai batasi maksimal sepatu
+3. tumpukan: </br>
+Array statis dari struct Sepatu yang berfungsi sebagai tumpukan untuk menyimpan data sepatu. Array ini memiliki batas maksimum yang telah ditentukan oleh konstanta MAX_SIZE, dan indeks atas tumpukan dikelola oleh variabel top. </br>
 
 
-1. push(Sepatu sepatu): </br>
-Fungsi ini digunakan untuk menambahkan sepatu ke tumpukan. Sepatu akan ditambahkan ke bagian belakang vektor.</br>
+1. Penjelasan Fungsi push(Sepatu sepatu)
+Fungsi ini digunakan untuk menambahkan sepatu ke tumpukan. Sepatu akan ditambahkan ke posisi paling atas dari tumpukan, yaitu ke indeks berikutnya setelah elemen terakhir yang ada saat ini. Implementasi fungsi ini memanfaatkan array statis yang digunakan untuk menyimpan tumpukan sepatu.</br>
+
+Cek Penuh: Fungsi terlebih dahulu memeriksa apakah tumpukan sudah penuh (dengan membandingkan indeks top dengan MAX_SIZE - 1). Jika penuh, fungsi akan menampilkan pesan kesalahan dan menghentikan operasi.
+Tambah Elemen: Jika masih ada ruang, elemen baru akan ditambahkan ke indeks berikutnya dalam array (tumpukan[++top] = sepatu), dan nilai top akan diperbarui untuk mencerminkan indeks elemen terakhir yang ada di tumpukan. </br>
+
 2. insert(int index, Sepatu sepatu):</br>
 Fungsi ini digunakan untuk menyisipkan sepatu pada indeks tertentu di tumpukan. Indeks dimulai dari 1. Jika indeks tidak valid, akan ditampilkan pesan kesalahan. </br>
 3. pop():</br>
