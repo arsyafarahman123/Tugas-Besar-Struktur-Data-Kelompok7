@@ -26,7 +26,7 @@
  </br> 2. Menampilkan menu </br>
  </br> 3. Memasukan tampilan menu  </br>
  </br> 4. Memilih menu 1 untuk menambahkan Sepatu  </br>
-          - <p Masukkan merek Sepatu  </p>
+          - </p> Masukkan merek Sepatu  </p>
           - Masukkan ukuran Sepatu  </br>
           - Masukkan warna Sepatu  </br>
           - Berhasil ditambahkan  </br>
