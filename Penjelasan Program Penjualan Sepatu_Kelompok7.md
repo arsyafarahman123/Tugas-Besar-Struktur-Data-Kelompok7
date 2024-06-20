@@ -68,6 +68,8 @@ Kelas TumpukanSepatu berfungsi untuk mengelola operasi yang dapat dilakukan pada
 
 3. tumpukan: Vector dari struct sepatu yang berfungsi sebagai tumpukan untuk menyimpan data sepatu.</br>
 Metode:</br>
+4. Fungsi array sebagai Konstanta untuk ukuran array sebagai batasi maksimal sepatu
+
 
 1. push(Sepatu sepatu): </br>
 Fungsi ini digunakan untuk menambahkan sepatu ke tumpukan. Sepatu akan ditambahkan ke bagian belakang vektor.</br>
