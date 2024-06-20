@@ -26,16 +26,16 @@
  </br> 2. Menampilkan menu </br>
  </br> 3. Memasukan tampilan menu  </br>
  </br> 4. Memilih menu 1 untuk menambahkan Sepatu  </br>
-         </br> - Masukkan merek Sepatu  </br>
-         </br> - Masukkan ukuran Sepatu  </br>
-         </br> - Masukkan warna Sepatu  </br>
-         </br> - Berhasil ditambahkan  </br>
+          - Masukkan merek Sepatu  </br>
+          - Masukkan ukuran Sepatu  </br>
+          - Masukkan warna Sepatu  </br>
+          - Berhasil ditambahkan  </br>
  </br> 5. Memilih menu 2 yaitu sisipkan Sepatu  </br>
-         </br> - Masukkan indeks untuk menyisipkan di atas tumpukan (dimulai dari 1)  </br>
-         </br> - Masukkan merek sepatu  </br>
-         </br> - Masukkan ukuran Sepatu  </br>
-         </br> - Masukkan warna Sepatu  </br>
-         </br> - Berhasil disisipkan  </br>
+          - Masukkan indeks untuk menyisipkan di atas tumpukan (dimulai dari 1)  </br>
+          - Masukkan merek sepatu  </br>
+          - Masukkan ukuran Sepatu  </br>
+          - Masukkan warna Sepatu  
+          - Berhasil disisipkan  </br>
 </br> 6. Memilih menu 3 yaitu hapus Sepatu  </br>
          </br> - Masukkan indeks untuk dihapus (dimulai dari 1)  </br>
          </br> - Berhasil dihapus  </br>
