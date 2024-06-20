@@ -1,15 +1,15 @@
 # <h1 align="center">Program Penjualan Sepatu Kelompok 7 IF-11D </h1>
 <p align="center"> Materi Struktur Data : Struct, Stack, Array, Search </p>
 
-<p align="center"> Nama Anggota Kelompok:
-</p> Qonita Rahayu Atmi - 2311102128</p>
-</p> Arsya Fathiha Rahman - 2311102152</p>
-</p> Nisrina Amalia Iffatunnisa - 2311102156</p>
+</p>Nama Anggota Kelompok: 
+</p> 1. Qonita Rahayu Atmi - 2311102128</p>
+</p> 2. Arsya Fathiha Rahman - 2311102152</p>
+</p> 3. Nisrina Amalia Iffatunnisa - 2311102156</p>
 
-<br/> Kelas : IF-11-D <br/>
-<br/> Dosen : Muhammad Afrizal Amrustian, S. Kom., M. Kom. <br/>
-<br/> Mata Kuliah : Struktur Data dan Algoritma  <br/>
-<br/> Semester : 2 </br>
+<p align="center">  Kelas : IF-11-D </p>
+<p align="center"> Dosen : Muhammad Afrizal Amrustian, S. Kom., M. Kom. </p>
+<p align="center">  Mata Kuliah : Struktur Data dan Algoritma  <br/>
+<p align="center">  Semester : 2 </p>
 
 ## Latar Belakang
 </br> Toko sepatu sering kali memiliki banyak persediaan sepatu dengan berbagai jenis, ukuran, dan warna. Mengelola persediaan ini secara efektif dapat menjadi tantangan, terutama saat stok sepatu berlimpah dan transaksi penjualan ramai. Kerap kali petugas toko Kesulitan ketik melacak persediaan, mereka sulit untuk mengetahui jumlah sepatu yang tersedia untuk setiap jenis, ukuran, dan warna, terutama saat stok sepatu banyak dan variasinya beragam. Salah satu solusi untuk mengatasi permasalahan ini adalah dengan memanfaatkan program komputer yang dapat membantu mengelola tumpukan (stack) persediaan sepatu. Program ini dapat diimplementasikan menggunakan bahasa pemrograman C++ dan memanfaatkan struktur data seperti struct, stack, array, dan fungsi pencarian. </br>
@@ -26,31 +26,31 @@
  </br> 2. Menampilkan menu </br>
  </br> 3. Memasukan tampilan menu  </br>
  </br> 4. Memilih menu 1 untuk menambahkan Sepatu  </br>
-    </br> a. Masukkan merek Sepatu  </br>
-    </br> b. Masukkan ukuran Sepatu  </br>
-    </br> c. Masukkan warna Sepatu  </br>
-    </br> d. Berhasil ditambahkan  </br>
+         </br> a. Masukkan merek Sepatu  </br>
+         </br> b. Masukkan ukuran Sepatu  </br>
+         </br> c. Masukkan warna Sepatu  </br>
+         </br> d. Berhasil ditambahkan  </br>
  </br> 5. Memilih menu 2 yaitu sisipkan Sepatu  </br>
-    </br> a. Masukkan indeks untuk menyisipkan di atas tumpukan (dimulai dari 1)  </br>
-    </br> b. Masukkan merek sepatu  </br>
-    </br> c. Masukkan ukuran Sepatu  </br>
-    </br> d. Masukkan warna Sepatu  </br>
-    </br> e. Berhasil disisipkan  </br>
- </br> 6. Memilih menu 3 yaitu hapus Sepatu  </br>
-    </br> a. Masukkan indeks untuk dihapus (dimulai dari 1)  </br>
-    </br> b. Berhasil dihapus  </br>
+         </br> a. Masukkan indeks untuk menyisipkan di atas tumpukan (dimulai dari 1)  </br>
+         </br> b. Masukkan merek sepatu  </br>
+         </br> c. Masukkan ukuran Sepatu  </br>
+         </br> d. Masukkan warna Sepatu  </br>
+         </br> e. Berhasil disisipkan  </br>
+</br> 6. Memilih menu 3 yaitu hapus Sepatu  </br>
+         </br> a. Masukkan indeks untuk dihapus (dimulai dari 1)  </br>
+         </br> b. Berhasil dihapus  </br>
  </br> 7. Memilih menu 4 yaitu tampilkan Sepatu  </br>
-    </br> a. Berhasil ditampilkan  </br>
+         </br> a. Berhasil ditampilkan  </br>
  </br> 8. Memilih menu 5 yaitu edit Sepatu  </br>
-    </br> a. Masukkan indeks untuk diedit (dimulai dari 1)  </br>
-    </br> b. Masukkan merek Sepatu baru  </br>
-    </br> c. Masukkan ukuran sepatu baru  </br>
-    </br> d. Masukkan warna Sepatu baru </br> 
-    </br> e. Berhasil diedit </br>
+         </br> a. Masukkan indeks untuk diedit (dimulai dari 1)  </br>
+         </br> b. Masukkan merek Sepatu baru  </br>
+         </br> c. Masukkan ukuran sepatu baru  </br>
+         </br> d. Masukkan warna Sepatu baru </br> 
+         </br> e. Berhasil diedit </br>
 </br> 9. Memilih menu 6 yaitu mencari sepatu </br>
-    </br> a. Masukkan tipe pencarian (merek/ukuran/warna) </br>
-    </br> b. Masukkan kata kunci pencarian </br>
-    </br> c. Berhasil dicari </br>
+         </br> a. Masukkan tipe pencarian (merek/ukuran/warna) </br>
+         </br> b. Masukkan kata kunci pencarian </br>
+         </br> c. Berhasil dicari </br>
 </br> 10. Memilih menu 0 yaitu berhasil keluar </br>
 </br> 11.  Selesai </br>
 
