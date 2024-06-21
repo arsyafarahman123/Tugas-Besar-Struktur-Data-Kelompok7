@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iomanip>
 #include <stack>
+#include <vector>
 
 using namespace std;
 
@@ -16,55 +17,46 @@ struct Sepatu
 class TumpukanSepatu
 {
 private:
-    stack<Sepatu> tumpukan; // Stack untuk menyimpan tumpukan sepatu
+    stack<Sepatu> tumpukan;     // Stack untuk menyimpan tumpukan sepatu
+    vector<Sepatu> arraySepatu; // Array untuk menyimpan sepatu karena lebih dinamis
+    const int maxSize = 20;     // Ukuran maksimum sepatu
 
 public:
     // Fungsi untuk menambahkan sepatu ke tumpukan
     void push(Sepatu sepatu)
     {
-        if (tumpukan.size() >= 20)
+        if (tumpukan.size() >= maxSize)
         {
             cout << "Tumpukan penuh! Tidak bisa menambahkan sepatu baru." << endl;
             return;
         }
-        tumpukan.push(sepatu); // Menambahkan sepatu ke stack
+        tumpukan.push(sepatu);         // Menambahkan sepatu ke stack
+        arraySepatu.push_back(sepatu); // Menambahkan sepatu ke array
     }
 
     // Fungsi untuk menyisipkan sepatu pada indeks tertentu
     void insert(int index, Sepatu sepatu)
     {
-        if (tumpukan.size() >= 20)
+        if (tumpukan.size() >= maxSize)
         {
             cout << "Tumpukan penuh! Tidak bisa menyisipkan sepatu baru." << endl;
             return;
         }
 
-        // Memastikan indeks valid untuk penyisipan
         if (index < 1 || index > tumpukan.size() + 1)
         {
             cout << "Indeks tidak valid!" << endl;
             return;
         }
 
-        // Stack sementara untuk menampung sepatu
-        stack<Sepatu> temp;
-        int size = tumpukan.size();
+        // Menyisipkan sepatu ke array
+        arraySepatu.insert(arraySepatu.begin() + index - 1, sepatu);
 
-        // Pindahkan elemen ke stack sementara
-        for (int i = 0; i < size - index + 1; ++i)
+        // Memperbarui stack
+        tumpukan = stack<Sepatu>(); // Mengosongkan stack
+        for (auto &s : arraySepatu)
         {
-            temp.push(tumpukan.top());
-            tumpukan.pop();
-        }
-
-        // Tambahkan sepatu baru
-        tumpukan.push(sepatu);
-
-        // Kembalikan elemen dari stack sementara
-        while (!temp.empty())
-        {
-            tumpukan.push(temp.top());
-            temp.pop();
+            tumpukan.push(s); // Memasukkan kembali sepatu dari array ke stack
         }
     }
 
@@ -79,7 +71,8 @@ public:
 
         Sepatu sepatu = tumpukan.top();
         tumpukan.pop();
-        return sepatu; // Mengembalikan sepatu yang dihapus
+        arraySepatu.pop_back(); // Menghapus sepatu dari array
+        return sepatu;          // Mengembalikan sepatu yang dihapus
     }
 
     // Fungsi untuk menghapus sepatu pada indeks tertentu
@@ -97,54 +90,35 @@ public:
             return;
         }
 
-        // Stack sementara untuk menampung sepatu
-        stack<Sepatu> temp;
-        int size = tumpukan.size();
+        // Menghapus sepatu dari array
+        arraySepatu.erase(arraySepatu.begin() + index - 1);
 
-        // Pindahkan elemen ke stack sementara
-        for (int i = 0; i < size - index; ++i)
+        // Memperbarui stack
+        tumpukan = stack<Sepatu>(); // Mengosongkan stack
+        for (auto &s : arraySepatu)
         {
-            temp.push(tumpukan.top());
-            tumpukan.pop();
-        }
-
-        // Hapus sepatu dari stack asli
-        tumpukan.pop();
-
-        // Kembalikan elemen dari stack sementara
-        while (!temp.empty())
-        {
-            tumpukan.push(temp.top());
-            temp.pop();
+            tumpukan.push(s); // Memasukkan kembali sepatu dari array ke stack
         }
     }
 
     // Fungsi untuk menampilkan semua sepatu dalam tumpukan dari atas ke bawah
-    // Fungsi untuk menampilkan semua sepatu dalam tumpukan dari atas ke bawah
     void print()
     {
-        if (tumpukan.empty())
+        if (arraySepatu.empty())
         {
             cout << "Tumpukan kosong!" << endl;
             return;
         }
-
-        // Stack sementara untuk menampung sepatu
-        stack<Sepatu> temp = tumpukan;
-        int size = temp.size();
 
         // Menampilkan tabel sepatu
         cout << "|--------------------------------------------------------------|" << endl;
         cout << "| No. | Merek Sepatu     | Ukuran Sepatu  |    Warna Sepatu    |" << endl;
         cout << "|--------------------------------------------------------------|" << endl;
 
-        // Perulangan dari atas ke bawah tumpukan
-        for (int i = size; i > 0; --i)
+        for (int i = arraySepatu.size() - 1; i >= 0; --i)
         {
-            Sepatu sepatu = temp.top();
-            temp.pop();
-            // Menampilkan isi tabel dengan nomor urut dari 1 dan seterusnya
-            cout << "| " << setw(3) << size - i + 1 << " | " << setw(15) << sepatu.merek << "  | " << setw(15) << sepatu.ukuran << "| " << setw(15) << sepatu.warna << "    |" << endl;
+            Sepatu sepatu = arraySepatu[i];
+            cout << "| " << setw(3) << arraySepatu.size() - i << " | " << setw(15) << sepatu.merek << "  | " << setw(15) << sepatu.ukuran << "| " << setw(15) << sepatu.warna << "    |" << endl;
         }
 
         cout << "|--------------------------------------------------------------|" << endl;
@@ -153,31 +127,20 @@ public:
     // Fungsi untuk mengedit sepatu pada indeks tertentu
     void edit(int index, Sepatu sepatu)
     {
-        if (index < 1 || index > tumpukan.size())
+        if (index < 1 || index > arraySepatu.size())
         {
             cout << "Indeks tidak valid!" << endl;
             return;
         }
 
-        // Stack sementara untuk menampung sepatu
-        stack<Sepatu> temp;
-        int size = tumpukan.size();
+        // Mengedit sepatu di array
+        arraySepatu[index - 1] = sepatu;
 
-        // Pindahkan elemen ke stack sementara
-        for (int i = 0; i < size - index; ++i)
+        // Memperbarui stack
+        tumpukan = stack<Sepatu>(); // Mengosongkan stack
+        for (auto &s : arraySepatu)
         {
-            temp.push(tumpukan.top());
-            tumpukan.pop();
-        }
-
-        // Edit sepatu pada indeks yang sesuai
-        tumpukan.top() = sepatu;
-
-        // Kembalikan elemen dari stack sementara
-        while (!temp.empty())
-        {
-            tumpukan.push(temp.top());
-            temp.pop();
+            tumpukan.push(s); // Memasukkan kembali sepatu dari array ke stack
         }
     }
 
@@ -185,24 +148,21 @@ public:
     void search(string keyword, string type)
     {
         bool found = false; // Menandakan apakah sepatu ditemukan
-        stack<Sepatu> temp = tumpukan;
-        int size = temp.size();
 
         cout << "|--------------------------------------------------------------|" << endl;
         cout << "| No. | Merek Sepatu     | Ukuran Sepatu  |    Warna Sepatu    |" << endl;
         cout << "|--------------------------------------------------------------|" << endl;
 
-        for (int i = size; i > 0; --i)
+        for (int i = arraySepatu.size() - 1; i >= 0; --i)
         {
-            Sepatu sepatu = temp.top();
-            temp.pop();
+            Sepatu sepatu = arraySepatu[i];
             // Mengecek apakah sepatu sesuai dengan keyword dan tipe pencarian
             if ((type == "merek" && sepatu.merek == keyword) ||
                 (type == "ukuran" && sepatu.ukuran == keyword) ||
                 (type == "warna" && sepatu.warna == keyword))
             {
                 // Menampilkan sepatu yang ditemukan
-                cout << "| " << setw(3) << i << " | " << setw(15) << sepatu.merek << "  | " << setw(15) << sepatu.ukuran << "| " << setw(15) << sepatu.warna << "    |" << endl;
+                cout << "| " << setw(3) << arraySepatu.size() - i << " | " << setw(15) << sepatu.merek << "  | " << setw(15) << sepatu.ukuran << "| " << setw(15) << sepatu.warna << "    |" << endl;
                 found = true; // Menandakan sepatu ditemukan
             }
         }
@@ -276,13 +236,13 @@ int main()
             cout << "Sepatu baru telah disisipkan di atas tumpukan!" << endl;
             break;
         }
+
         case 3:
         {
             // Menghapus Sepatu
             int index;
             cout << "Masukkan indeks untuk dihapus (dimulai dari 1): ";
             cin >> index;
-
             tumpukanSepatu.remove(index); // Menghapus sepatu dari tumpukan
             cout << "Sepatu telah dihapus!" << endl;
             break;
@@ -337,4 +297,4 @@ int main()
     } while (pilihan != 0); // Keluar jika pilihan 0
 
     return 0;
-}
+}                                
