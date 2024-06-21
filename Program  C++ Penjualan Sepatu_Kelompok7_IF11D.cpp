@@ -12,7 +12,7 @@ struct Sepatu
 };
 
 // Konstanta untuk ukuran array
-const int MAX_SIZE = 20; // Misalnya, batasi maksimal 100 sepatu
+const int MAX_SIZE = 20; // Misalnya, batasi maksimal 20 sepatu
 
 // Kelas untuk mengelola tumpukan/Stack sepatu
 class TumpukanSepatu
